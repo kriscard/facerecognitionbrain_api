@@ -99,12 +99,3 @@ app.put("/image", (req, res) => {
 app.listen(3000, () => {
   console.log("app is running on port 3000");
 });
-
-/* --> TODO : Route
-
-/ signin --> POST = success/fail
-/register --> POST = user
-/profile/:userID --> GET = user
-/image --> PUT --> user
-
-*/
