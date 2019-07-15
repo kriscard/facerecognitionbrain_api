@@ -9,11 +9,16 @@ const signin = require("./controllers/signin");
 const image = require("./controllers/image");
 const profile = require("./controllers/profile");
 
+console.log(process.env.POSTGRES_USER);
 const db = knex({
   client: "pg",
   connection: {
-    connectionString: process.env.DATABASE_URL,
-    ssl: true
+    // connectionString: process.env.DATABASE_URL,
+    // ssl: true
+    host: process.env.POSTGRES_HOST,
+    user: process.env.POSTGRES_USER,
+    password: process.env.POSTGRES_PASSWORD,
+    database: process.env.POSTGRES_DB
   }
 });
 
